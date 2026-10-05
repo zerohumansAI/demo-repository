@@ -1,6 +1,7 @@
-queue_rules:
-  - name: default
-    queue_conditions:
+pull_request_rules:
+  - name: bypass-test
+    conditions:
       - base=main
-    merge_conditions:
-      - check-success = build
+    actions:
+      merge:
+        method: merge
