@@ -5,4 +5,3 @@ queue_rules:
     merge_conditions:
       - check-success = build
     merge_method: fast-forward
-    allow_queue_branch_edit: true
