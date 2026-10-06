@@ -1,8 +1,1 @@
-conflict_resolvers:
-  - paths: ["**"]
-    strategy: theirs
-queue_rules:
-  - name: default
-    queue_conditions: [base=main]
-    merge_conditions: []
-    merge_method: merge-batch
+pull_request_rules: []
