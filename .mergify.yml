@@ -1,1 +1,11 @@
-pull_request_rules: []
+merge_protections:
+  - name: gate
+    if: [base=main]
+    success_conditions:
+      - check-success=merge-protection-blocker
+pull_request_rules:
+  - name: direct-merge
+    conditions: [base=main]
+    actions:
+      merge:
+        method: merge
