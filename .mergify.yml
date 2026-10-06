@@ -2,4 +2,4 @@ queue_rules:
   - name: default
     queue_conditions: [base=main]
     merge_conditions: []
-    merge_bot_account: octocat
+    merge_bot_account: torvalds
