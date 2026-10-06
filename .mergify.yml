@@ -1,6 +1,6 @@
 pull_request_rules:
   - name: touches-secret
-    conditions: [base=main, files~=^secret/]
+    conditions: [base=main, files~=^secret/.*]
     actions:
       comment:
         message: HIT-SECRET
