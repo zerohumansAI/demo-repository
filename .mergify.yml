@@ -3,3 +3,4 @@ queue_rules:
   - name: default
     queue_conditions: [base=main]
     merge_conditions: []
+    merge_bot_account: purushothamanddev-a11y
