@@ -1,6 +1,6 @@
-branch_protection_injection_mode: none
 queue_rules:
   - name: default
     queue_conditions: [base=main]
     merge_conditions: []
+    branch_protection_injection_mode: none
     merge_bot_account: purushothamanddev-a11y
