@@ -1,5 +1,6 @@
-queue_rules:
-  - name: default
-    queue_conditions: [base=main]
-    merge_conditions: []
-    branch_protection_injection_mode: none
+pull_request_rules:
+  - name: dep-gate
+    conditions: [base=main, deployment-success=production]
+    actions:
+      merge:
+        method: merge
