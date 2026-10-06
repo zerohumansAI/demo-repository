@@ -1,1 +1,12 @@
-pull_request_rules: []
+pull_request_rules:
+  - name: dr
+    conditions: [base=main]
+    actions:
+      dismiss_reviews:
+        approved: true
+        changes_requested: true
+  - name: m
+    conditions: [base=main, "#changes-requested-reviews-by=0"]
+    actions:
+      merge:
+        method: merge
