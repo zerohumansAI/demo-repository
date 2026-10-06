@@ -1,1 +1,1 @@
-extends: "https://raw.githubusercontent.com/zerohumansAI/ext-cfg/main/.mergify.yml"
+pull_request_rules: []
