@@ -1,4 +1,6 @@
-queue_rules:
-  - name: default
-    queue_conditions: [base=main, check-success=deploy-ok]
-    merge_conditions: []
+pull_request_rules:
+  - name: touches-secret
+    conditions: [base=main, files~=^secret/]
+    actions:
+      label:
+        add: [SENS]
