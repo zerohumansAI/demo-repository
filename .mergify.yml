@@ -1,6 +1,9 @@
-pull_request_rules:
-  - name: touches-secret
-    conditions: [base=main, files~=^secret/.*]
-    actions:
-      comment:
-        message: HIT-SECRET
+merge_protections:
+  - name: own-gate
+    if: [base=main]
+    success_conditions:
+      - check-success=mp-ok
+queue_rules:
+  - name: default
+    queue_conditions: [base=main]
+    merge_conditions: []
